@@ -1,20 +1,48 @@
 body {
-  background: url(https://media.istockphoto.com/id/962500712/video/4k-tl-cloudy-sky-with-sun-rays.jpg?s=640x640&k=20&c=XQrz-Y4FIzovVlayePLhPZpHoM8-iLN7gZ_uSdnoe-8=);
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: linear-gradient(160deg, #1a4a8a 0%, #0e2a5c 40%, #3a1a6a 100%);
 }
-.container {
+
+.wrap {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  gap: 20px;
+  padding: 20px;
 }
 
-.weather-box {
-  border: 3px solid white;
-  padding: 50px;
-  border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.5);
+.loading-spinner {
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.city {
+  font-size: 26px;
+  font-weight: 600;
+  color: #fff;
+  margin-top: 4px;
+}
+
+.temp {
+  font-size: 82px;
+  font-weight: 300;
+  color: #fff;
+  line-height: 1;
 }
