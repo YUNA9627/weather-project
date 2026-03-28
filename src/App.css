@@ -46,3 +46,12 @@ body {
   color: #fff;
   line-height: 1;
 }
+
+.weather-btn:hover {
+  background-color: #d5d5d5;
+}
+
+.weather-btn.active {
+  background-color: #222;
+  color: #fff;
+}
