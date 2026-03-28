@@ -9,6 +9,7 @@ function App() {
   const [city, setCity] = useState('')
   const [loading, setLoading] = useState(false)
   const [apiError, setAPIError] = useState("");
+    const [tempUnit, setTempUnit] = useState('C')
   const cities = ['paris', 'new york', 'tokyo', 'seoul']
 
   const getCurrentLocation = () => {
@@ -67,7 +68,7 @@ function App() {
     <div className="wrap">
       {loading
         ? (
-          <div className="content">
+          <div className="loader-wrap">
             <ClipLoader
               color="#ccc"
               loading={loading}
@@ -78,7 +79,13 @@ function App() {
           </div>
         ) : !apiError ? (
         <div className="content">
-          {weather && <WeatherBox weather={weather} />}
+          {weather && (
+            <WeatherBox 
+              weather={weather}
+              tempUnit={tempUnit}
+              setTempUnit={setTempUnit}
+            />
+          )}
           <WeatherBtn
             cities={cities}
             setCity={setCity}
