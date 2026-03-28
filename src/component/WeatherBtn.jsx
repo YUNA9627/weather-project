@@ -1,12 +1,13 @@
 import React from 'react'
-import { Button } from 'react-bootstrap';
 
-const WeatherBtn = () => {
+const WeatherBtn = ({ cities, setCity }) => {
+  console.log("cities?",cities)
   return (
     <div>
-      <Button variant="warning">Current Location</Button>
-      <Button variant="warning">Paris</Button>
-      <Button variant="warning">New york</Button>
+      <button>Current Location</button>
+      {cities.map((item)=>(
+        <button onClick={()=>setCity(item)}>{item}</button>
+      ))}
     </div>
   )
 }
