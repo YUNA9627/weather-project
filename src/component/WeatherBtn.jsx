@@ -3,7 +3,7 @@ import React from 'react'
 const WeatherBtn = ({ cities, setCity, currentLocation, selectCity }) => {
   console.log("cities?",cities)
   return (
-    <div>
+    <div className="city-btn">
       <button
         onClick={() => currentLocation("current")}
         className={selectCity === '' ? 'weather-btn active' : 'weather-btn'}
